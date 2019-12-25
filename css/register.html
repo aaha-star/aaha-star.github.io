@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>注册界面</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function register() {
+          if (localStorage.clickcoun) {
+            localStorage.clickcoun= Number(localStorage.clickcoun)+1;
+        } else {
+            localStorage.clickcoun = 1;
+        }
+        var user = document.getElementById('user').value;
+        var password = document.getElementById('password').value;
+         var username="username"+Number(localStorage.clickcoun);
+        var passwordname="passwordname"+Number(localStorage.clickcoun);
+         for(i=1;i<=Number(localStorage.clickcoun);i++){
+        var usernam="username"+i;
+        if(user==localStorage.getItem(usernam) ){
+        alert("该账号已存在，请重新注册");
+        break;
+        }
+        else{
+          localStorage.setItem(username,user); 
+           localStorage.setItem(passwordname,password); 
+        alert("注册成功");
+          window.location.href='登录页.html';
+    var storage=window.localStorage;
+         console.log(storage);
+        break;
+        }
+        }
+        }
+
+</script>
+</head>
+
+<body>
+    <!-- 注册表单 -->
+    <form style="margin-left:500px;margin-top:200px;">
+        <div class="form-group">
+            <label for="user" stype="display:inline;">账户：</label>
+            <input type="text" class="form-control" id="user" style="display:inline;width:200px;" autocomplete="off" />
+        </div>
+        <div class="form-group">
+            <label for="password" style="display:inline;">密码：</label>
+            <input type="password" class="form-control" id="password" style="display:inline;width:200px;" autocomplete="off" />
+        </div>
+        <input type="button" class="btn btn-primary" onclick="register()" value="确认注册">
+    </form>
+</body>
+</html>
