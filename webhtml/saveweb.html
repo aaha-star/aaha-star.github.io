@@ -1,0 +1,54 @@
+    <head>
+    <title>网页保存</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'iconfont';
+            src: url('css/iconfont/iconfont.eot');
+            src: url('css/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), url('css/iconfont/iconfont.woff2') format('woff2'), url('css/iconfont/iconfont.woff') format('woff'), url('css/iconfont/iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 32px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+    <body>
+        <span class="iconfont"><a href="flexhomepage.html">主页&#xe607;</a></span>
+        <h1>aaha云记事本</h1>
+        网页备注<br />
+        <input type="text" id="remarks" /><br />
+        <input type="text" id="demo" /><span id="output"></span>
+        <script type="text/javascript">
+            var urlReg = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+            setInterval(function(){
+            if(document.getElementById("demo").value.match(urlReg) == null){
+            document.getElementById("output").innerHTML = "only url allowed";
+            }else{
+            document.getElementById("output").innerHTML = "";
+            }
+            },500);
+            function yes(){
+            result=window.confirm("您确认提交吗");
+            var x=document.all.demo.value;
+            var y=document.all.remarks.value;
+            var urlname="url:"+y+":"+x;
+            alert(urlname);
+            localStorage.setItem(urlname,x);
+            }
+        </script>
+        <input type="button" onclick="yes()" value="提交" />
+    </body>

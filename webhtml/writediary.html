@@ -1,0 +1,141 @@
+<html>
+<head>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'iconfont';
+            src: url('css/iconfont/iconfont.eot');
+            src: url('css/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), url('css/iconfont/iconfont.woff2') format('woff2'), url('css/iconfont/iconfont.woff') format('woff'), url('css/iconfont/iconfont.ttf') format('truetype'), url('iconfont.svg#iconfont') format('svg');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 32px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @media print {
+            h1 {
+                font-family: times,serif;
+                font-size: 10px;
+                voice-family: male;
+                richness: 80;
+                cue-before: url("beep.au")
+            }
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        textarea {
+            background-color: aliceblue;
+        }
+        h1 {
+    color: aliceblue;
+}
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <title>写日记</title>
+</head>
+<body>
+    <h1>aaha云记事本</h1>
+    <script>
+        function yes( ){
+        var y=document.all.year.value;
+        var  m=document.all.month.value;
+        var d=document.all.day.value;
+        var x=document.all.niha.value;
+        if(!confirm("你确认提交的日期为"+y+"."+m+"."+d))
+        {
+        return false;
+        }
+        if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+        localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "你已经保存了 " + localStorage.clickcount + " 次日记。";
+        result=window.confirm("您确认提交吗");
+        var diary="diaryname"+y+"."+m+"."+d;
+        alert(diary);
+        localStorage.setItem(diary,x);
+        var storage=window.localStorage;
+        console.log(storage);
+        }
+    </script>
+    <span class="iconfont"><a href="flexhomepage.html">主页&#xe607;</a></span>
+    <h1>
+        来写下今天的日记吧
+    </h1>
+    <form>
+        日期
+        <select id="year">
+            <option>2016</option>
+            <option>2017</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+        </select>
+        年
+        <select id="month">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        月
+        <select id="day">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+        日
+        <h2>日记</h2>
+        <textarea rows="40" cols="100" id="niha"></textarea>
+    </form>
+    <input type="button" onclick="yes()" value="提交" />
+    <div id="result"></div>
+</body>
+</html>

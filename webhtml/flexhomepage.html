@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        弹性布局
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<body>
+    <span id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <span class="iconfont"><a href="flexhomepage.html">&#xe607;主页</a></span>
+        <span class="iconfont"><a href="writediary.html">&#xe613;写日记</a></span>
+        <span class="iconfont"><a href="saveweb.html">&#xe600;网页保存</a></span>
+    </span>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 打开</span>
+    <script>
+        function openNav(){
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
+        function savediary(){
+         var y=document.all.year.value;
+        var  m=document.all.month.value;
+        var d=document.all.day.value;
+        var diary="diaryname"+y+"."+m+"."+d;
+        document .getElementById("aaha").innerHTML =localStorage.getItem(diary);
+        }
+        function saveurl(){
+        window.location.href='网页收藏.html'
+        }
+          function lookdiary(num){
+           document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
+                }
+    </script>
+
+    <div class="box">
+        <img class="img" src="img/头像.jpg">
+        <div class="back">
+            <h1>aaha云记事本</h1>
+        </div>
+    </div>
+    <input type="hidden" name="val" />
+    <div class="below">
+        <div class="box1" style="width:500px;height:500px; overflow:auto; border:1px solid;" id="divContain">
+          <form>
+                选择日期查看
+                <select id="year">
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                </select>
+                年
+                <select id="month">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                月
+                <select id="day">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                日
+            </form>
+            <div style="width:400px;height:180px; overflow:auto; border:1px solid;" id="aaha"></div>
+            <input type="button" onclick="savediary()" value="查看日记" />
+            <br />
+            <script>
+                document.write("已保存的日记");
+                document.write("<br>");
+                var b="diaryname";
+                var i=0;
+                for(var j=0;j<localStorage.length;j++){
+                a=localStorage.key(j);
+                if(a.substring(0,9)==b){
+                c=localStorage.key(j); 
+                document.write("<input type='button' onclick='lookdiary(this.id)'  value='"+c+"' id='"+j+"' />");
+                document.write("</br>");
+                }
+                }
+            </script>
+        </div>
+        <div style="width:440px;height:500px; overflow:auto; border:1px solid;">
+            <script>
+                document.write("已保存的网址");
+                document.write("<br>");
+                var b="url:";
+                for(var j=0;j<localStorage.length;j++){
+                a=localStorage.key(j);
+                if(a.substring(0,4)==b){
+                
+                document.write("<a href='"+localStorage.getItem(a)+"'>"+ a+localStorage.getItem(a)+"</a>");
+                document.write("<br>");
+                }
+         
+                }
+            </script>
+        </div>
+    </div>
+</body>
+ </html>
