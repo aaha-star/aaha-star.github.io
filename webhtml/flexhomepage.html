@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-        µ¯ĞÔ²¼¾Ö
+        å¼¹æ€§å¸ƒå±€
     </title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
@@ -11,11 +11,11 @@
 <body>
     <span id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <span class="iconfont"><a href="flexhomepage.html">&#xe607;Ö÷Ò³</a></span>
-        <span class="iconfont"><a href="writediary.html">&#xe613;Ğ´ÈÕ¼Ç</a></span>
-        <span class="iconfont"><a href="saveweb.html">&#xe600;ÍøÒ³±£´æ</a></span>
+        <span class="iconfont"><a href="flexhomepage.html">&#xe607;ä¸»é¡µ</a></span>
+        <span class="iconfont"><a href="writediary.html">&#xe613;å†™æ—¥è®°</a></span>
+        <span class="iconfont"><a href="saveweb.html">&#xe600;ç½‘é¡µä¿å­˜</a></span>
     </span>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; ´ò¿ª</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; æ‰“å¼€</span>
     <script>
         function openNav(){
         document.getElementById("mySidenav").style.width = "250px";
@@ -31,7 +31,7 @@
         document .getElementById("aaha").innerHTML =localStorage.getItem(diary);
         }
         function saveurl(){
-        window.location.href='ÍøÒ³ÊÕ²Ø.html'
+        window.location.href='ç½‘é¡µæ”¶è—.html'
         }
           function lookdiary(num){
            document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
@@ -39,16 +39,16 @@
     </script>
 
     <div class="box">
-        <img class="img" src="img/Í·Ïñ.jpg">
+        <img class="img" src="img/title.jpg">
         <div class="back">
-            <h1>aahaÔÆ¼ÇÊÂ±¾</h1>
+            <h1>aahaäº‘è®°äº‹æœ¬</h1>
         </div>
     </div>
     <input type="hidden" name="val" />
     <div class="below">
         <div class="box1" style="width:500px;height:500px; overflow:auto; border:1px solid;" id="divContain">
           <form>
-                Ñ¡ÔñÈÕÆÚ²é¿´
+                é€‰æ‹©æ—¥æœŸæŸ¥çœ‹
                 <select id="year">
                     <option>2016</option>
                     <option>2017</option>
@@ -58,7 +58,7 @@
                     <option>2020</option>
                     <option>2021</option>
                 </select>
-                Äê
+                å¹´
                 <select id="month">
                     <option>1</option>
                     <option>2</option>
@@ -73,7 +73,7 @@
                     <option>11</option>
                     <option>12</option>
                 </select>
-                ÔÂ
+                æœˆ
                 <select id="day">
                     <option>1</option>
                     <option>2</option>
@@ -107,13 +107,13 @@
                     <option>30</option>
                     <option>31</option>
                 </select>
-                ÈÕ
+                æ—¥
             </form>
             <div style="width:400px;height:180px; overflow:auto; border:1px solid;" id="aaha"></div>
-            <input type="button" onclick="savediary()" value="²é¿´ÈÕ¼Ç" />
+            <input type="button" onclick="savediary()" value="æŸ¥çœ‹æ—¥è®°" />
             <br />
             <script>
-                document.write("ÒÑ±£´æµÄÈÕ¼Ç");
+                document.write("å·²ä¿å­˜çš„æ—¥è®°");
                 document.write("<br>");
                 var b="diaryname";
                 var i=0;
@@ -129,7 +129,7 @@
         </div>
         <div style="width:440px;height:500px; overflow:auto; border:1px solid;">
             <script>
-                document.write("ÒÑ±£´æµÄÍøÖ·");
+                document.write("å·²ä¿å­˜çš„ç½‘å€");
                 document.write("<br>");
                 var b="url:";
                 for(var j=0;j<localStorage.length;j++){
