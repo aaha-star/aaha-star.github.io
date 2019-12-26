@@ -23,10 +23,16 @@
                       }
           }
           function deletediary(num){
+            if(!confirm("你确认删除吗"))｛
+            return false;       
+        ｝
                 localStorage.removeItem(localStorage.key(num));
                 location.reload();
                   }
           function deleteweb(num){   
+            if(!confirm("你确认删除吗"))｛
+            return false;       
+        ｝
         localStorage.removeItem(localStorage.key(num));
         location.reload();
         }
