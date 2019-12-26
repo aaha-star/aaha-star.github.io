@@ -12,43 +12,43 @@
 - 第一个文本框填入你要收藏得网址备注
 - 第二个文本框填入网址
 ## 文件说明
-│  index.html
-│  list.txt
-│  README.md
-│  
-└─webhtml
-    │  enter.html
-    │  flexhomepage.html
-    │  register.html
-    │  saveweb.html
-    │  writediary.html
-    │  
-    ├─css
-    │  │  background.jpg
-    │  │  style.css
-    │  │  
-    │  └─iconfont
-    │          demo.css
-    │          demo.html
-    │          demo_index.html
-    │          iconfont.css
-    │          iconfont.eot
-    │          iconfont.js
-    │          iconfont.json
-    │          iconfont.svg
-    │          iconfont.ttf
-    │          iconfont.woff
-    │          iconfont.woff2
-    │          Normalize.css
-    │          s
-    │          selection.json
-    │          
-    ├─img
-    │      background.jpg
-    │      title.jpg
-    │      
-    └─JS
-            mine.js
+- │  index.html
+- │  list.txt
+- │  README.md
+- │  
+- └─webhtml
+-     │  enter.html
+-     │  flexhomepage.html
+-     │  register.html
+-     │  saveweb.html
+-     │  writediary.html
+-     │  
+-     ├─css
+-     │  │  background.jpg
+-     │  │  style.css
+-     │  │  
+-     │  └─iconfont
+-     │          demo.css
+-     │          demo.html
+-     │          demo_index.html
+-     │          iconfont.css
+-     │          iconfont.eot
+-     │          iconfont.js
+-     │          iconfont.json
+-     │          iconfont.svg
+-     │          iconfont.ttf
+-     │          iconfont.woff
+-     │          iconfont.woff2
+-     │          Normalize.css
+-     │          s
+-     │          selection.json
+-     │          
+-     ├─img
+-     │      background.jpg
+-     │      title.jpg
+-     │      
+-     └─JS
+-             mine.js
 ### html 
 1. enter.html 登录页
 2. flexhomepage.html 弹性布局主页
