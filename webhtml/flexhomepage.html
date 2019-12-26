@@ -31,15 +31,22 @@
         document .getElementById("aaha").innerHTML =localStorage.getItem(diary);
         }
           function lookdiary(num){
-           document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
+                document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
                 }
-        function hrefweb(num){
+          function hrefweb(num){
             if(localStorage.getItem(localStorage.key(num)).substring(0,4)!="http"){
-            window.location.href="http://"+localStorage.getItem(localStorage.key(num));
-            }
-            else{
-                    window.location.href=localStorage.getItem(localStorage.key(num));
-            }
+                 window.location.href="http://"+localStorage.getItem(localStorage.key(num));
+                          }
+                 else{
+                 window.location.href=localStorage.getItem(localStorage.key(num));
+                      }
+          function deletediary(num){
+                localStorage.removeItem(localStorage.key(num));
+                location.reload();
+                  }
+          function deleteweb(num){   
+        localStorage.removeItem(localStorage.key(num));
+        location.reload();
         }
     </script>
 
@@ -126,6 +133,7 @@
                 a=localStorage.key(j);
                 if(a.substring(0,9)==b){
                 c=localStorage.key(j); 
+                document.write("<input type='botton' onclick='deletediary(this.id)' value='删除' id='"+j+"' style='width:30px;'/>");
                 document.write("<input type='button' onclick='lookdiary(this.id)'  value='"+c+"' id='"+j+"' />");
                 document.write("</br>");
                 }
@@ -140,6 +148,7 @@
                 for(var j=0;j<localStorage.length;j++){
                 a=localStorage.key(j);
                 if(a.substring(0,4)==b){
+                document.write("<input type='botton' onclick='deleteweb(this.id)' value='删除' id='"+j+"' style='width:30px;'/>");
                 document.write("<input type='button' onclick='hrefweb(this.id)'  value='"+a+localStorage.getItem(a)+"' id='"+j+"' />");       
                 document.write("<br>");
                 }
