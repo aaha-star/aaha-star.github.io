@@ -34,7 +34,12 @@
            document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
                 }
         function hrefweb(num){
-            window.location.href='http://www.baidu.com';
+            if(localStorage.getItem(localStorage.key(num)).substring(0,4)!="http"){
+            window.location.href="http"+localStorage.getItem(localStorage.key(num));
+            }
+            else{
+                    window.location.href=localStorage.getItem(localStorage.key(num));
+            }
         }
     </script>
 
