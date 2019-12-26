@@ -33,6 +33,9 @@
           function lookdiary(num){
            document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
                 }
+        function saveweb(num){
+        window.location.href='localStorage.getItem(localStorage.key(num))';
+        }
     </script>
 
     <div class="box">
@@ -132,7 +135,7 @@
                 for(var j=0;j<localStorage.length;j++){
                 a=localStorage.key(j);
                 if(a.substring(0,4)==b){
-                document.write("<a href='"+localStorage.getItem(a)+"' target='_blank' >"+ a+localStorage.getItem(a)+"</a>");         
+                document.write("<input type='button' onclick='hrefweb(this.id)'  value='"+a+localStorage.getItem(a)"' id='"+j+"' />");       
                 document.write("<br>");
                 }
                 }
