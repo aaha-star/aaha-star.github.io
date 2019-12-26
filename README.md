@@ -12,7 +12,7 @@
 - 第一个文本框填入你要收藏得网址备注
 - 第二个文本框填入网址
 ## 文件说明
-、、、
+```
  │  index.html
  │  list.txt
  │  README.md
@@ -50,7 +50,7 @@
      │      
      └─JS
              mine.js
-、、、
+```
 ### html 
 1. enter.html 登录页
 2. flexhomepage.html 弹性布局主页
