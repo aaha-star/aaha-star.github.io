@@ -35,7 +35,7 @@
                 }
         function hrefweb(num){
             if(localStorage.getItem(localStorage.key(num)).substring(0,4)!="http"){
-            window.location.href="http"+localStorage.getItem(localStorage.key(num));
+            window.location.href="http://"+localStorage.getItem(localStorage.key(num));
             }
             else{
                     window.location.href=localStorage.getItem(localStorage.key(num));
