@@ -30,9 +30,6 @@
         var diary="diaryname"+y+"."+m+"."+d;
         document .getElementById("aaha").innerHTML =localStorage.getItem(diary);
         }
-        function saveurl(){
-        window.location.href='网页收藏.html'
-        }
           function lookdiary(num){
            document .getElementById("aaha").innerHTML =localStorage.getItem(localStorage.key(num));
                 }
@@ -135,8 +132,8 @@
                 for(var j=0;j<localStorage.length;j++){
                 a=localStorage.key(j);
                 if(a.substring(0,4)==b){
-                
-                document.write("<a href='"+localStorage.getItem(a)+"'>"+ a+localStorage.getItem(a)+"</a>");
+                document.write(localStorage.getItem(a));
+                document.write("<a href='"+localStorage.getItem(a)+"' >"+ a+localStorage.getItem(a)+"</a>");
                 document.write("<br>");
                 }
          
